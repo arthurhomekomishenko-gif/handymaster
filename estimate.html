@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Estimate - MisterHandyPro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root { 
+            --dark-blue: #1a237e; 
+            --bright-red: #d32f2f; 
+        }
+        
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+            padding: 20px; 
+            margin: 0;
+        }
+
+        .form-card { 
+            background: white; 
+            max-width: 600px; 
+            margin: 40px auto; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+        }
+
+        h1 { 
+            color: var(--dark-blue); 
+            text-align: center; 
+            margin-top: 0;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            color: #333; 
+        }
+
+        input, select, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+            font-size: 16px; 
+        }
+
+        /* Выбор Indoor/Outdoor */
+        .type-selector { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+            margin-bottom: 25px; 
+        }
+
+        .type-selector input[type="radio"] { 
+            display: none; 
+        }
+
+        .type-option { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            text-align: center; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            border: 2px solid #eee; 
+            transition: 0.3s; 
+            display: block;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .type-selector input[type="radio"]:checked + .type-option { 
+            border-color: var(--bright-red); 
+            background: #fff5f5; 
+            color: var(--bright-red); 
+        }
+
+        .submit-btn { 
+            background: var(--bright-red); 
+            color: white; 
+            border: none; 
+            padding: 18px; 
+            width: 100%; 
+            font-size: 18px; 
+            font-weight: bold; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+
+        .submit-btn:hover { 
+            background: #b71c1c; 
+        }
+
+        .back-link { 
+            display: block; 
+            text-align: center; 
+            margin-top: 25px; 
+            color: var(--dark-blue); 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .form-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <h1><i class="fas fa-file-invoice-dollar"></i> Free Estimate</h1>
+    <p class="subtitle">Fill out the form below and we will contact you shortly.</p>
+    
+    <form action="https://formspree.io/f/anton@gmail.com" method="POST">
+        
+        <label>Project Location:</label>
+        <div class="type-selector">
+            <input type="radio" id="indoor" name="location" value="Indoor" checked>
+            <label for="indoor" class="type-option">
+                <i class="fas fa-home"></i><br>INDOOR
+            </label>
+            
+            <input type="radio" id="outdoor" name="location" value="Outdoor">
+            <label for="outdoor" class="type-option">
+                <i class="fas fa-tree"></i><br>OUTDOOR
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="service">Service Category:</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Plumbing">Plumbing Repairs</option>
+                <option value="Electrical">Electrical Work</option>
+                <option value="Furniture">Furniture Assembly</option>
+                <option value="Painting">Painting / Drywall</option>
+                <option value="Kitchen/Bath">Kitchen or Bathroom Reno</option>
+                <option value="TV Mounting">TV Mounting / Hanging</option>
+                <option value="Maintenance">General Maintenance</option>
+                <option value="Other">Other (Please specify below)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="_replyto" placeholder="john@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (___) ___-____" required>
+        </div>
+
+        <div class="form-group">
+            <label for="details">Project Details:</label>
+            <textarea id="details" name="message" rows="5" placeholder="Please describe what needs to be fixed or installed..." required></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Estimate Request from MisterHandyPro">
+
+        <button type="submit" class="submit-btn">SEND REQUEST</button>
+    </form>
+    
+    <a href="index.html" class="back-link">← Back to Homepage</a>
+</div>
+
+</body>
+</html>

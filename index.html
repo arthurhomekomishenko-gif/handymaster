@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MisterHandyPro - Professional Home Improvements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root { 
+            --dark-blue: #1a237e; 
+            --bright-red: #d32f2f; 
+            --whatsapp-green: #25d366; 
+        }
+        
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        
+        /* Header */
+        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-area h1 { margin: 0; color: var(--dark-blue); font-size: 28px; text-transform: uppercase; }
+        .contact-group { display: flex; align-items: center; gap: 20px; }
+        .phone-num { font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none; }
+        .social-link { font-size: 30px; text-decoration: none; transition: 0.3s; }
+        .fa-whatsapp { color: var(--whatsapp-green); }
+        .fa-instagram { color: #E4405F; }
+
+        /* Business Card */
+        .business-card { background: linear-gradient(135deg, var(--dark-blue) 0%, #0d124d 100%); color: white; max-width: 1200px; margin: 20px auto; padding: 30px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .card-info h2 { margin: 0 0 10px 0; font-size: 24px; color: #ffeb3b; }
+        .card-badge { background: var(--bright-red); color: white; padding: 15px 25px; border-radius: 4px; font-weight: bold; text-transform: uppercase; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .card-badge:hover { background: #b71c1c; transform: scale(1.05); }
+
+        /* Profile Photo Container */
+        .profile-photo-container { 
+            max-width: 1140px; 
+            margin: 0 auto 20px auto; 
+            padding: 0 30px; 
+            box-sizing: border-box;
+        }
+        .profile-photo-container img { 
+            width: 100%; 
+            max-height: 600px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* About Section */
+        .about-section { background: white; max-width: 1140px; margin: 20px auto; padding: 30px; border: 1px solid #ddd; border-radius: 8px; }
+        .about-section h2 { color: var(--dark-blue); border-bottom: 2px solid var(--bright-red); display: inline-block; padding-bottom: 5px; }
+
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 20px 5%; max-width: 1200px; margin: 0 auto; }
+        .service-cube { background: white; border: 1px solid #ddd; text-align: center; text-decoration: none; color: #333; transition: 0.3s; overflow: hidden; }
+        .service-cube:hover { border-color: var(--bright-red); transform: translateY(-3px); }
+        .service-cube img { width: 100%; height: 160px; object-fit: cover; display: block; }
+        .service-cube span { display: block; padding: 12px; font-weight: bold; background: #fafafa; font-size: 13px; text-transform: uppercase; border-top: 1px solid #eee; }
+
+        /* Info & Reviews */
+        .info-section { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
+        .review-item { background: white; padding: 15px; margin-bottom: 15px; border-left: 4px solid var(--bright-red); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .stars { color: #ffc107; }
+
+        /* Bottom Form */
+        .bottom-form-container { background: white; max-width: 1140px; margin: 40px auto; padding: 30px; border: 1px solid #ccc; border-radius: 8px; }
+        .bottom-form-container h2 { text-align: center; color: var(--dark-blue); text-transform: uppercase; margin-bottom: 25px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        .form-row input, .bottom-form-container textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+        .bottom-form-container textarea { height: 100px; margin-top: 10px; resize: vertical; }
+        .send-btn { background: var(--bright-red); color: white; border: none; padding: 15px; width: 100%; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 4px; margin-top: 15px; transition: 0.3s; }
+        .send-btn:hover { background: #b71c1c; }
+
+        /* Instagram Feed */
+        .instagram-feed { background: white; max-width: 1140px; margin: 20px auto; padding: 30px; border-radius: 8px; border: 1px solid #ddd; }
+        .insta-header { display: flex; align-items: center; margin-bottom: 20px; text-decoration: none; color: inherit; }
+        .insta-header i { font-size: 40px; color: #E4405F; margin-right: 15px; }
+        .insta-header div h3 { margin: 0; color: var(--dark-blue); }
+        .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+        .insta-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; transition: 0.3s; }
+        .insta-grid img:hover { opacity: 0.8; }
+
+        /* Float WhatsApp */
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 30px; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+
+        @media (max-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } .insta-grid { grid-template-columns: repeat(3, 1fr); } .form-row { grid-template-columns: 1fr; } .business-card { flex-direction: column; text-align: center; gap: 20px; } .profile-photo-container { padding: 0 15px; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-area"><h1>MisterHandyPro</h1></div>
+    <div class="contact-group">
+        <a href="https://wa.me/14372547774" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/handymasterio" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+14372547774" class="phone-num">+1 (437) 254-7774</a>
+    </div>
+</header>
+
+<div class="business-card">
+    <div class="card-info">
+        <h2>Professional Handyman Services</h2>
+        <p><i class="fas fa-map-marker-alt"></i> We serve all GTA area, including Milton, Oakville, Hamilton, Mississauga, Kitchener, Guelph, and surrounding areas!</p>
+        <p><i class="fas fa-check-circle"></i> Licensed • Insured • 10+ Years Experience</p>
+    </div>
+    <a href="estimate.html" class="card-badge">GET A FREE ESTIMATE</a>
+</div>
+
+<div class="profile-photo-container">
+    <img src="https://i.ibb.co/RkksT0TM/main-photo.jpg" alt="MisterHandyPro Main Photo">
+</div>
+
+<section class="about-section">
+    <h2>Why Choose MisterHandyPro?</h2>
+    <p>At <strong>MisterHandyPro</strong>, we believe that no repair is too small for perfection. We specialize in home maintenance of <strong>any complexity</strong>, treating every project as if it were our own home. 
+    <br><br>
+    <strong>Safety & Precision:</strong> Your safety is our top priority. All works are performed strictly following Ontario building codes and safety regulations. We use professional-grade tools and maintain a clean, organized workspace. 
+    <br><br>
+    <strong>High Care Policy:</strong> We work with maximum caution to protect your floors, furniture, and finishes. From a single leaky faucet to complex renovations, expect 100% transparency and top-tier craftsmanship.</p>
+</section>
+
+<div class="services-grid">
+    <a href="plumbing.html" class="service-cube"><img src="https://images.unsplash.com/photo-1558618081-cd45503083bd?w=400"><span>Plumbing Repairs</span></a>
+    <a href="electrical.html" class="service-cube"><img src="https://ltdfoto.ru/images/2026/01/30/result_WhatsApp-Image-2026-01-29-at-17.46.04-1.jpg?w=400"><span>Electrical Work</span></a>
+    <a href="painting.html" class="service-cube"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400"><span>Interior Painting</span></a>
+    <a href="furniture.html" class="service-cube"><img src="https://images.unsplash.com/photo-1595844730298-b960ff98fee0?w=400"><span>Furniture Assembly</span></a>
+    <a href="kitchen.html" class="service-cube"><img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?w=400"><span>Kitchen Repairs</span></a>
+    <a href="bathroom.html" class="service-cube"><img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=400"><span>Bathroom Reno</span></a>
+    <a href="drywall.html" class="service-cube"><img src="https://images.unsplash.com/photo-1581141849291-1125c7b692b5?w=400"><span>Drywall Repair</span></a>
+    <a href="maintenance.html" class="service-cube"><img src="https://images.unsplash.com/photo-1581244276823-473766642278?w=400"><span>General Maintenance</span></a>
+    <a href="doors.html" class="service-cube"><img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=400"><span>Door Installation</span></a>
+    <a href="windows.html" class="service-cube"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400"><span>Window Repair</span></a>
+    <a href="tiles.html" class="service-cube"><img src="https://images.unsplash.com/photo-1581579185169-1c9f9b9b8b2b?w=400"><span>Tile Work</span></a>
+    <a href="flooring.html" class="service-cube"><img src="https://images.unsplash.com/photo-1588854337114-1c9f9b9b8b2b?w=400"><span>Flooring</span></a>
+    <a href="deck.html" class="service-cube"><img src="https://images.unsplash.com/photo-1560448075-bb4e28e8c39c?w=400"><span>Deck Repair</span></a>
+    <a href="fence.html" class="service-cube"><img src="https://images.unsplash.com/photo-1597002773071-74c4f6db3e4f?w=400"><span>Fence Repair</span></a>
+    <a href="tv.html" class="service-cube"><img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400"><span>TV Mounting</span></a>
+    <a href="vents.html" class="service-cube"><img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400"><span>Dryer Vent</span></a>
+</div>
+
+<section class="info-section">
+    <div class="reviews-box">
+        <h3>Customer Reviews</h3>
+        <div class="review-item"><div class="stars">★★★★★</div><strong>John D., Mississauga</strong>"MisterHandyPro fixed my sink perfectly. Professional and fast!"</div>
+        <div class="review-item"><div class="stars">★★★★★</div><strong>Sarah M., Oakville</strong>"Excellent assembly service. Highly recommend!"</div>
+        <div class="review-item"><div class="stars">★★★★★</div><strong>Mike R., Brampton</strong>"Best repair experience in the GTA."</div>
+    </div>
+    <div class="map-box">
+        <h3>Service Area</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184821.57468132644!2d-79.8055106!3d43.5823521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b469fe662e2f7%3A0x13b3a33a7a924851!2sMississauga%2C%20ON!5e0!3m2!1sen!2sca!4v1700000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <p style="font-size: 14px; margin-top: 10px;"><i class="fas fa-truck"></i> We serve all GTA area, including Milton, Oakville, Hamilton, Mississauga, Kitchener, Guelph, and surrounding areas!</p>
+    </div>
+</section>
+
+<section class="bottom-form-container">
+    <h2><i class="fas fa-tools"></i> Quick Request / Text Us</h2>
+    <form action="https://formspree.io/f/anton@gmail.com" method="POST">
+        <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number">
+        </div>
+        <textarea name="message" placeholder="What needs fixing? Describe your project briefly..." required></textarea>
+        <button type="submit" class="send-btn">SEND REQUEST</button>
+    </form>
+</section>
+
+<section class="instagram-feed">
+    <a href="https://instagram.com/handymasterio" target="_blank" class="insta-header">
+        <i class="fab fa-instagram"></i>
+        <div>
+            <h3>Follow @handymasterio</h3>
+            <span>See our latest work in Mississauga</span>
+        </div>
+    </a>
+    <div class="insta-grid">
+        <img src="https://images.unsplash.com/photo-1581244276823-473766642278?w=300" alt="Work 1">
+        <img src="https://images.unsplash.com/photo-1595844730298-b960ff98fee0?w=300" alt="Work 2">
+        <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?w=300" alt="Work 3">
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=300" alt="Work 4">
+        <img src="https://images.unsplash.com/photo-1581141849291-1125c7b692b5?w=300" alt="Work 5">
+        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300" alt="Work 6">
+    </div>
+</section>
+
+<a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<footer>
+    <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 MisterHandyPro. Licensed & Insured.</p>
+</footer>
+
+</body>
+</html>
