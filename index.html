@@ -49,6 +49,15 @@
         .about-section { background: white; max-width: 1140px; margin: 20px auto; padding: 30px; border: 1px solid #ddd; border-radius: 8px; }
         .about-section h2 { color: var(--dark-blue); border-bottom: 2px solid var(--bright-red); display: inline-block; padding-bottom: 5px; }
 
+        /* Logo */
+        .logo-area img {
+        max-height: 70px; /* Регулируйте высоту под ваш вкус */
+        transition: 0.3s;
+        }
+        .logo-area img:hover {
+        opacity: 0.8; /* Эффект при наведении */
+        }
+
         /* Services Grid */
         .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 20px 5%; max-width: 1200px; margin: 0 auto; }
         .service-cube { background: white; border: 1px solid #ddd; text-align: center; text-decoration: none; color: #333; transition: 0.3s; overflow: hidden; }
@@ -69,7 +78,7 @@
         .bottom-form-container textarea { height: 100px; margin-top: 10px; resize: vertical; }
         .send-btn { background: var(--bright-red); color: white; border: none; padding: 15px; width: 100%; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 4px; margin-top: 15px; transition: 0.3s; }
         .send-btn:hover { background: #b71c1c; }
-
+        
         /* Instagram Feed */
         .instagram-feed { background: white; max-width: 1140px; margin: 20px auto; padding: 30px; border-radius: 8px; border: 1px solid #ddd; }
         .insta-header { display: flex; align-items: center; margin-bottom: 20px; text-decoration: none; color: inherit; }
@@ -88,7 +97,12 @@
 <body>
 
 <header>
-    <div class="logo-area"><h1>Handymaster Pro</h1></div>
+    <div class="logo-area">
+    <a href="index.html">
+        <img src="https://i.postimg.cc/qq6LmynF/IMG-1533.jpg" alt="HandyMaster Pro Logo" style="height: 60px; width: auto; display: block;">
+    </a>
+</div>
+
     <div class="contact-group">
         <a href="https://wa.me/14372547774" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://instagram.com/handymasterio" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -132,7 +146,7 @@
 <section class="info-section">
     <div class="reviews-box">
         <h3>Customer Reviews</h3>
-        <div class="review-item"><div class="stars">★★★★★</div><strong>John D., Mississauga</strong>"Handymaster Pro fixed my sink perfectly. Professional and fast!"</div>
+        <div class="review-item"><div class="stars">★★★★★</div><strong>John D., Mississauga</strong>"These guys fixed my sink perfectly. Professional and fast!"</div>
         <div class="review-item"><div class="stars">★★★★★</div><strong>Sarah M., Oakville</strong>"Excellent assembly service. Highly recommend!"</div>
         <div class="review-item"><div class="stars">★★★★★</div><strong>Mike R., Brampton</strong>"Best repair experience in the GTA."</div>
     </div>
