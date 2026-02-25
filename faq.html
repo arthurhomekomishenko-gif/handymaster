@@ -9,23 +9,26 @@
         :root { --dark-blue: #1a237e; --bright-red: #d32f2f; --whatsapp-green: #25d366; }
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         
-        /* Navigation */
-        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
-        .logo-area img { max-height: 70px; }
-        nav { background: var(--dark-blue); padding: 10px 5%; text-align: center; }
+        /* Идентичный Header */
+        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-area img { height: 70px; width: auto; display: block; }
+        .contact-group { display: flex; align-items: center; gap: 20px; }
+        .phone-num { font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none; }
+        .social-link { font-size: 30px; text-decoration: none; transition: 0.3s; }
+        .fa-whatsapp { color: var(--whatsapp-green); }
+        .fa-instagram { color: #E4405F; }
+
+        nav { background: var(--dark-blue); padding: 12px 5%; text-align: center; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
         nav a:hover { color: #ffeb3b; }
 
-        /* FAQ Styling */
-        .faq-container { max-width: 900px; margin: 40px auto; padding: 0 20px; min-height: 70vh; }
+        .faq-container { max-width: 900px; margin: 40px auto; padding: 0 20px; min-height: 60vh; }
         h1 { text-align: center; color: var(--dark-blue); margin-bottom: 30px; text-transform: uppercase; }
         
-        .faq-item { background: white; margin-bottom: 10px; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .faq-question { background: white; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--dark-blue); transition: 0.3s; }
-        .faq-question:hover { background: #f9f9f9; }
-        .faq-question i { transition: 0.3s; color: var(--bright-red); }
-        
-        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fff; color: #555; line-height: 1.6; }
+        .faq-item { background: white; margin-bottom: 10px; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+        .faq-question { background: white; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--dark-blue); }
+        .faq-question i { color: var(--bright-red); transition: 0.3s; }
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fff; color: #555; }
         .faq-item.active .faq-answer { max-height: 500px; padding: 20px; border-top: 1px solid #eee; }
         .faq-item.active .faq-question i { transform: rotate(180deg); }
 
@@ -33,15 +36,16 @@
         .cta-btn { background: var(--bright-red); color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 15px; }
 
         .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+
+        @media (max-width: 768px) { .contact-group { gap: 10px; } .phone-num { font-size: 18px; } }
     </style>
 </head>
 <body>
 
 <header>
-   <div class="logo-area">
-    <a href="index.html">
-        <img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo" style="height: 70px; width: auto; display: block;"></a>
-</div>
+    <div class="logo-area">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo"></a>
+    </div>
     <div class="contact-group">
         <a href="https://wa.me/14372547774" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://instagram.com/handymasterio" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -57,46 +61,29 @@
 
 <div class="faq-container">
     <h1>Frequently Asked Questions</h1>
-
     <div class="faq-item">
         <div class="faq-question">What areas do you serve? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">We proudly serve the Greater Toronto Area (GTA) and Halton Region, including Milton, Oakville, Burlington, Mississauga, Hamilton, Kitchener, and Guelph.</div>
+        <div class="faq-answer">We proudly serve Milton, Oakville, Burlington, Mississauga, Hamilton, Kitchener, and Guelph.</div>
     </div>
-
-    <div class="faq-item">
-        <div class="faq-question">Do you provide free estimates? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Yes! We provide free rough estimates over the phone or via WhatsApp if you send us photos of the project. For complex on-site assessments, a small consultation fee may apply, which is then deducted from your final invoice.</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">How do you charge: hourly or flat rate? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">It depends on the job. Small repairs are usually charged at a competitive hourly rate with a 2-hour minimum. Larger projects like flooring or painting are provided as a fixed-price (flat rate) quote.</div>
-    </div>
-
     <div class="faq-item">
         <div class="faq-question">Are you insured and licensed? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Absolutely. HandyMaster Pro is a fully registered business in Ontario. We carry liability insurance to ensure your property and our team are protected during every job.</div>
+        <div class="faq-answer">Absolutely. HandyMaster Pro is a fully registered and insured business in Ontario.</div>
     </div>
-
     <div class="faq-item">
-        <div class="faq-question">Do I need to provide tools or materials? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">We bring all the professional tools required for the job. Regarding materials (like paint, tiles, or specific fixtures), you can provide them yourself, or we can pick them up for you for an additional delivery fee.</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">Do you work on weekends? <i class="fas fa-chevron-down"></i></div>
-        <div class="faq-answer">Yes, we understand that our clients have busy schedules. We offer weekend appointments by request to ensure your home repairs don't interfere with your work week.</div>
+        <div class="faq-question">How can I get a quote? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Simply send us a photo of your project via WhatsApp, and we'll provide a rough estimate within an hour!</div>
     </div>
 
     <div class="cta-box">
-        <h3>Still have questions?</h3>
-        <p>Text us a photo of your project for a quick quote!</p>
-        <a href="https://wa.me/14372547774" class="cta-btn">MESSAGE ON WHATSAPP</a>
+        <h3>Need a pro?</h3>
+        <a href="https://wa.me/14372547774" class="cta-btn">GET A QUOTE VIA WHATSAPP</a>
     </div>
 </div>
 
 <a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
 </a>
 
 <footer>
@@ -104,7 +91,6 @@
 </footer>
 
 <script>
-    // Script for Accordion Effect
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
@@ -112,6 +98,5 @@
         });
     });
 </script>
-
 </body>
 </html>
