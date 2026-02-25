@@ -6,36 +6,62 @@
     <title>EMERGENCY REPAIRS - HandyMaster Pro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        :root { --dark-blue: #1a237e; --bright-red: #d32f2f; --whatsapp-green: #25d366; }
+        :root { 
+            --dark-blue: #1a237e; 
+            --bright-red: #d32f2f; 
+            --whatsapp-green: #25d366; 
+        }
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fff; color: #333; }
         
-        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
-        .logo-area img { height: 70px; }
+        /* Идентичный Header как на главной */
+        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-area img { height: 70px; width: auto; display: block; }
+        .contact-group { display: flex; align-items: center; gap: 20px; }
+        .phone-num { font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none; }
+        .social-link { font-size: 30px; text-decoration: none; transition: 0.3s; }
+        .fa-whatsapp { color: var(--whatsapp-green); }
+        .fa-instagram { color: #E4405F; }
+
+        /* Навигация */
         nav { background: var(--dark-blue); padding: 12px 5%; text-align: center; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav a:hover { color: #ffeb3b; }
 
+        /* Emergency Content */
         .emergency-hero { background: var(--bright-red); color: white; text-align: center; padding: 60px 20px; }
-        .emergency-hero h1 { font-size: 48px; margin: 0; text-transform: uppercase; }
-        .emergency-hero p { font-size: 20px; margin-top: 10px; }
+        .emergency-hero h1 { font-size: 42px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
+        .emergency-hero p { font-size: 20px; margin-top: 10px; font-weight: bold; }
 
-        .service-list { max-width: 900px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .e-item { background: #f9f9f9; padding: 20px; border-left: 5px solid var(--bright-red); border-radius: 4px; }
-        .e-item h3 { margin-top: 0; color: var(--dark-blue); }
+        .service-list { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .e-item { background: #f9f9f9; padding: 25px; border-left: 6px solid var(--bright-red); border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .e-item i { font-size: 30px; color: var(--bright-red); margin-bottom: 15px; display: block; }
+        .e-item h3 { margin: 0 0 10px 0; color: var(--dark-blue); font-size: 22px; }
+        .e-item p { margin: 0; line-height: 1.5; color: #555; }
 
-        .call-now-box { text-align: center; margin: 40px auto; max-width: 600px; padding: 30px; border: 2px dashed var(--bright-red); border-radius: 8px; }
-        .big-phone { font-size: 32px; color: var(--bright-red); font-weight: bold; text-decoration: none; display: block; margin: 20px 0; }
-        .btn-emergency { background: var(--whatsapp-green); color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; }
+        .call-now-box { text-align: center; margin: 50px auto; max-width: 700px; padding: 40px 20px; border: 3px dashed var(--bright-red); border-radius: 12px; background: #fffcfc; }
+        .call-now-box h2 { color: var(--dark-blue); margin-top: 0; }
+        .big-phone { font-size: 36px; color: var(--bright-red); font-weight: bold; text-decoration: none; display: block; margin: 20px 0; }
+        .big-phone:hover { text-decoration: underline; }
+        
+        .btn-emergency-wa { background: var(--whatsapp-green); color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-emergency-wa:hover { transform: scale(1.05); background: #1eb954; }
 
-        @media (max-width: 768px) { .service-list { grid-template-columns: 1fr; } .emergency-hero h1 { font-size: 32px; } }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+
+        @media (max-width: 768px) { 
+            .service-list { grid-template-columns: 1fr; } 
+            .emergency-hero h1 { font-size: 28px; }
+            .contact-group { gap: 10px; }
+            .phone-num { font-size: 18px; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-   <div class="logo-area">
-    <a href="index.html">
-        <img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo" style="height: 70px; width: auto; display: block;"></a>
-</div>
+    <div class="logo-area">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo"></a>
+    </div>
     <div class="contact-group">
         <a href="https://wa.me/14372547774" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://instagram.com/handymasterio" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -51,25 +77,49 @@
 </nav>
 
 <div class="emergency-hero">
-    <h1><i class="fas fa-exclamation-triangle"></i> 24/7 Emergency Repairs</h1>
-    <p>Fast Help in Milton, Oakville & Mississauga Areas</p>
+    <h1><i class="fas fa-bolt"></i> Urgent Home Repairs</h1>
+    <p>Available for same-day emergency calls in GTA & Halton</p>
 </div>
 
 <div class="service-list">
-    <div class="e-item"><h3><i class="fas fa-tint"></i> Plumbing Emergencies</h3><p>Leaky pipes, clogged drains, or faucet bursts. We prevent water damage fast.</p></div>
-    <div class="e-item"><h3><i class="fas fa-lock-open"></i> Locksmith Services</h3><p>Locked out of your house or broken key? We will get you back inside safely.</p></div>
-    <div class="e-item"><h3><i class="fas fa-bolt"></i> Electrical Issues</h3><p>Power outages, burning smell from outlets, or tripped breakers.</p></div>
-    <div class="e-item"><h3><i class="fas fa-shield-alt"></i> Security & Board-up</h3><p>Broken windows or doors that won't close. We secure your home immediately.</p></div>
+    <div class="e-item">
+        <i class="fas fa-tint"></i>
+        <h3>Plumbing Leaks</h3>
+        <p>Burst pipes, leaking faucets, or clogged drains. We act fast to prevent costly water damage to your floors.</p>
+    </div>
+    <div class="e-item">
+        <i class="fas fa-lock"></i>
+        <h3>Lock & Door Issues</h3>
+        <p>Broken locks, door alignment issues, or urgent security repairs. We ensure your home is safe and accessible.</p>
+    </div>
+    <div class="e-item">
+        <i class="fas fa-glass-martini-alt"></i>
+        <h3>Broken Windows</h3>
+        <p>Emergency board-up or glass cleanup. We help secure your property after accidental damage.</p>
+    </div>
+    <div class="e-item">
+        <i class="fas fa-exclamation-circle"></i>
+        <h3>Small Electrical</h3>
+        <p>Tripped breakers, sparking outlets, or flickering lights that need immediate professional attention.</p>
+    </div>
 </div>
 
 <div class="call-now-box">
-    <h2>NEED HELP RIGHT NOW?</h2>
-    <p>Average response time: 30-60 minutes</p>
-    <a href="tel:+14372547774" class="big-phone">+1 (437) 254-7774</a>
-    <a href="https://wa.me/14372547774" class="btn-emergency"><i class="fab fa-whatsapp"></i> TEXT ON WHATSAPP</a>
+    <h2>NEED ASSISTANCE IMMEDIATELY?</h2>
+    <p>The fastest way to reach us is by Phone or WhatsApp</p>
+    <a href="tel:+14372547774" class="big-phone"><i class="fas fa-phone-alt"></i> +1 (437) 254-7774</a>
+    <a href="https://wa.me/14372547774?text=EMERGENCY: I need help with..." class="btn-emergency-wa">
+        <i class="fab fa-whatsapp"></i> MESSAGE ON WHATSAPP
+    </a>
 </div>
 
-<footer><p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro.</p></footer>
+<a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+</a>
+
+<footer>
+    <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Emergency Service Rates May Apply.</p>
+</footer>
 
 </body>
 </html>
