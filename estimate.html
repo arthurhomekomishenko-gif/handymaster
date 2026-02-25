@@ -9,15 +9,24 @@
         :root { 
             --dark-blue: #1a237e; 
             --bright-red: #d32f2f; 
+            --whatsapp-green: #25d366;
         }
         
-        body { 
-            font-family: Arial, sans-serif; 
-            background: #f4f4f4; 
-            padding: 20px; 
-            margin: 0;
-        }
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
 
+        /* Header & Nav */
+        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-area img { height: 70px; width: auto; display: block; }
+        .contact-group { display: flex; align-items: center; gap: 20px; }
+        .phone-num { font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none; }
+        .social-link { font-size: 30px; text-decoration: none; transition: 0.3s; }
+        .fa-whatsapp { color: var(--whatsapp-green); }
+        .fa-instagram { color: #E4405F; }
+        nav { background: var(--dark-blue); padding: 12px 5%; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav a:hover { color: #ffeb3b; }
+
+        /* Form Card */
         .form-card { 
             background: white; 
             max-width: 600px; 
@@ -25,115 +34,61 @@
             padding: 40px; 
             border-radius: 10px; 
             box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+            box-sizing: border-box;
         }
 
-        h1 { 
-            color: var(--dark-blue); 
-            text-align: center; 
-            margin-top: 0;
-        }
-
-        p.subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
+        h1 { color: var(--dark-blue); text-align: center; margin-top: 0; }
+        p.subtitle { text-align: center; color: #666; margin-bottom: 30px; }
         .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
 
-        label { 
-            display: block; 
-            margin-bottom: 8px; 
-            font-weight: bold; 
-            color: #333; 
+        /* Photo Upload Styling */
+        .file-input-wrapper { background: #f8f9fa; border: 2px dashed #ccc; padding: 20px; text-align: center; border-radius: 5px; margin-top: 10px; }
+
+        /* WhatsApp Alternative Box */
+        .whatsapp-alt {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+            text-align: center;
         }
-
-        input, select, textarea { 
-            width: 100%; 
-            padding: 12px; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-            box-sizing: border-box; 
-            font-size: 16px; 
-        }
-
-        /* Выбор Indoor/Outdoor */
-        .type-selector { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 15px; 
-            margin-bottom: 25px; 
-        }
-
-        .type-selector input[type="radio"] { 
-            display: none; 
-        }
-
-        .type-option { 
-            background: #f8f9fa; 
-            padding: 15px; 
-            text-align: center; 
-            cursor: pointer; 
-            border-radius: 5px; 
-            border: 2px solid #eee; 
-            transition: 0.3s; 
-            display: block;
+        .wa-btn {
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
-            color: #555;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            font-size: 18px;
         }
+        .wa-btn:hover { background-color: #1eb954; transform: scale(1.02); }
 
-        .type-selector input[type="radio"]:checked + .type-option { 
-            border-color: var(--bright-red); 
-            background: #fff5f5; 
-            color: var(--bright-red); 
-        }
+        .type-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px; }
+        .type-selector input[type="radio"] { display: none; }
+        .type-option { background: #f8f9fa; padding: 15px; text-align: center; cursor: pointer; border-radius: 5px; border: 2px solid #eee; transition: 0.3s; font-weight: bold; color: #555; }
+        .type-selector input[type="radio"]:checked + .type-option { border-color: var(--bright-red); background: #fff5f5; color: var(--bright-red); }
 
-        .submit-btn { 
-            background: var(--bright-red); 
-            color: white; 
-            border: none; 
-            padding: 18px; 
-            width: 100%; 
-            font-size: 18px; 
-            font-weight: bold; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            transition: 0.3s; 
-        }
+        .submit-btn { background: var(--bright-red); color: white; border: none; padding: 18px; width: 100%; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: #b71c1c; }
+        .back-link { display: block; text-align: center; margin-top: 25px; color: var(--dark-blue); text-decoration: none; font-weight: bold; }
 
-        .submit-btn:hover { 
-            background: #b71c1c; 
-        }
-
-        .back-link { 
-            display: block; 
-            text-align: center; 
-            margin-top: 25px; 
-            color: var(--dark-blue); 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 480px) {
-            .form-card { padding: 20px; }
+        @media (max-width: 768px) { 
+            .form-card { margin: 20px; padding: 25px; } 
+            .phone-num { font-size: 18px; }
         }
     </style>
-     <div class="logo-area">
-    <a href="index.html">
-     <center>  <img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo" style="height: 85px; width: auto; display: block;"></center></a>
-</div>
 </head>
 <body>
-    
+
 <header>
-   <div class="logo-area">
-    <a href="index.html">
-        <img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo" style="height: 70px; width: auto; display: block;"></a>
-</div>
+    <div class="logo-area">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo"></a>
+    </div>
     <div class="contact-group">
         <a href="https://wa.me/14372547774" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://instagram.com/handymasterio" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -141,29 +96,25 @@
     </div>
 </header>
 
-<nav style="background: #1a237e; padding: 10px 5%; text-align: center;">
-    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">Home</a>
-    <a href="about.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">About Us</a>
-    <a href="faq.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">FAQ</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
 </nav>
 
 <div class="form-card">
     <h1><i class="fas fa-file-invoice-dollar"></i> Free Estimate</h1>
-    <p class="subtitle">Fill out the form below and we will contact you shortly.</p>
+    <p class="subtitle">Complete the form or use WhatsApp for a faster response.</p>
     
-    <form action="https://formspree.io/f/anton@gmail.com" method="POST">
+    <form action="https://formspree.io/f/anton@gmail.com" method="POST" enctype="multipart/form-data">
         
         <label>Project Location:</label>
         <div class="type-selector">
             <input type="radio" id="indoor" name="location" value="Indoor" checked>
-            <label for="indoor" class="type-option">
-                <i class="fas fa-home"></i><br>INDOOR
-            </label>
+            <label for="indoor" class="type-option"><i class="fas fa-home"></i><br>INDOOR</label>
             
             <input type="radio" id="outdoor" name="location" value="Outdoor">
-            <label for="outdoor" class="type-option">
-                <i class="fas fa-tree"></i><br>OUTDOOR
-            </label>
+            <label for="outdoor" class="type-option"><i class="fas fa-tree"></i><br>OUTDOOR</label>
         </div>
 
         <div class="form-group">
@@ -177,7 +128,7 @@
                 <option value="Kitchen/Bath">Kitchen or Bathroom Reno</option>
                 <option value="TV Mounting">TV Mounting / Hanging</option>
                 <option value="Maintenance">General Maintenance</option>
-                <option value="Other">Other (Please specify below)</option>
+                <option value="Other">Other</option>
             </select>
         </div>
 
@@ -187,27 +138,40 @@
         </div>
 
         <div class="form-group">
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="_replyto" placeholder="john@example.com" required>
-        </div>
-
-        <div class="form-group">
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" placeholder="+1 (___) ___-____" required>
         </div>
 
         <div class="form-group">
             <label for="details">Project Details:</label>
-            <textarea id="details" name="message" rows="5" placeholder="Please describe what needs to be fixed or installed..." required></textarea>
+            <textarea id="details" name="message" rows="3" placeholder="Describe what needs fixing..." required></textarea>
         </div>
 
-        <input type="hidden" name="_subject" value="New Estimate Request from Handy Master Pro">
+        <div class="form-group">
+            <label>Attach Photos (max 2):</label>
+            <div class="file-input-wrapper">
+                <input type="file" name="upload" accept="image/*" multiple>
+            </div>
+        </div>
 
-        <button type="submit" class="submit-btn">SEND REQUEST</button>
+        <input type="hidden" name="_subject" value="New Estimate Request with Photos">
+        <button type="submit" class="submit-btn">SEND EMAIL REQUEST</button>
     </form>
+
+    <div class="whatsapp-alt">
+        <p style="margin-bottom: 15px; font-weight: bold; color: #555;">— OR QUICK QUOTE VIA —</p>
+        <a href="https://wa.me/14372547774?text=Hi! I need an estimate. Here are the photos of my project:" class="wa-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> SEND PHOTOS ON WHATSAPP
+        </a>
+        <p style="font-size: 13px; color: #888; margin-top: 10px;">The fastest way to get a price!</p>
+    </div>
     
     <a href="index.html" class="back-link">← Back to Homepage</a>
 </div>
+
+<footer>
+    <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Licensed & Insured.</p>
+</footer>
 
 </body>
 </html>
