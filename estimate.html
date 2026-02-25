@@ -10,76 +10,92 @@
             --dark-blue: #1a237e; 
             --bright-red: #d32f2f; 
             --whatsapp-green: #25d366;
+            --light-gray: #f8f9fa;
         }
         
-        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 0; }
 
-        /* Header & Nav */
-        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        /* Идеальная Шапка */
+        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .logo-area img { height: 70px; width: auto; display: block; }
         .contact-group { display: flex; align-items: center; gap: 20px; }
         .phone-num { font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none; }
         .social-link { font-size: 30px; text-decoration: none; transition: 0.3s; }
         .fa-whatsapp { color: var(--whatsapp-green); }
         .fa-instagram { color: #E4405F; }
+
         nav { background: var(--dark-blue); padding: 12px 5%; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
         nav a:hover { color: #ffeb3b; }
 
-        /* Form Card */
+        /* Улучшенная Форма */
         .form-card { 
             background: white; 
-            max-width: 600px; 
+            max-width: 700px; 
             margin: 40px auto; 
             padding: 40px; 
-            border-radius: 10px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
             box-sizing: border-box;
         }
 
-        h1 { color: var(--dark-blue); text-align: center; margin-top: 0; }
-        p.subtitle { text-align: center; color: #666; margin-bottom: 30px; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
-        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
+        h1 { color: var(--dark-blue); text-align: center; margin-top: 0; font-size: 32px; text-transform: uppercase; }
+        p.subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 18px; }
 
-        /* Photo Upload Styling */
-        .file-input-wrapper { background: #f8f9fa; border: 2px dashed #ccc; padding: 20px; text-align: center; border-radius: 5px; margin-top: 10px; }
+        .section-label { font-size: 18px; font-weight: bold; color: var(--dark-blue); margin-bottom: 15px; display: block; border-left: 4px solid var(--bright-red); padding-left: 10px; }
 
-        /* WhatsApp Alternative Box */
-        .whatsapp-alt {
-            margin-top: 30px;
-            padding-top: 25px;
-            border-top: 1px solid #eee;
-            text-align: center;
-        }
-        .wa-btn {
-            background-color: var(--whatsapp-green);
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+        /* Project Location - Дизайн карточками */
+        .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+        .location-grid input[type="radio"] { display: none; }
+        .location-card { 
+            background: var(--light-gray); 
+            padding: 25px; 
+            text-align: center; 
+            cursor: pointer; 
+            border-radius: 10px; 
+            border: 2px solid transparent; 
             transition: 0.3s;
-            font-size: 18px;
         }
-        .wa-btn:hover { background-color: #1eb954; transform: scale(1.02); }
+        .location-card i { font-size: 30px; margin-bottom: 10px; color: #777; transition: 0.3s; }
+        .location-card span { display: block; font-weight: bold; color: #555; text-transform: uppercase; }
 
-        .type-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px; }
-        .type-selector input[type="radio"] { display: none; }
-        .type-option { background: #f8f9fa; padding: 15px; text-align: center; cursor: pointer; border-radius: 5px; border: 2px solid #eee; transition: 0.3s; font-weight: bold; color: #555; }
-        .type-selector input[type="radio"]:checked + .type-option { border-color: var(--bright-red); background: #fff5f5; color: var(--bright-red); }
+        .location-grid input[type="radio"]:checked + .location-card { 
+            border-color: var(--bright-red); 
+            background: #fff5f5; 
+        }
+        .location-grid input[type="radio"]:checked + .location-card i { color: var(--bright-red); }
+        .location-grid input[type="radio"]:checked + .location-card span { color: var(--bright-red); }
 
-        .submit-btn { background: var(--bright-red); color: white; border: none; padding: 18px; width: 100%; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; transition: 0.3s; }
-        .submit-btn:hover { background: #b71c1c; }
-        .back-link { display: block; text-align: center; margin-top: 25px; color: var(--dark-blue); text-decoration: none; font-weight: bold; }
+        /* Поля ввода */
+        .form-group { margin-bottom: 25px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #444; }
+        input, select, textarea { 
+            width: 100%; padding: 14px; 
+            border: 2px solid #e1e1e1; 
+            border-radius: 8px; 
+            box-sizing: border-box; 
+            font-size: 16px; 
+            transition: 0.3s;
+        }
+        input:focus, select:focus, textarea:focus { border-color: var(--dark-blue); outline: none; background: #fff; }
+
+        /* Фото */
+        .file-box { background: #fdfdfd; border: 2px dashed #cbd5e0; padding: 25px; text-align: center; border-radius: 8px; cursor: pointer; }
+        .file-box:hover { border-color: var(--bright-red); }
+
+        /* Кнопки */
+        .submit-btn { background: var(--bright-red); color: white; border: none; padding: 20px; width: 100%; font-size: 20px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); }
+        .submit-btn:hover { background: #b71c1c; transform: translateY(-2px); }
+
+        .whatsapp-alt { margin-top: 40px; padding: 30px; background: #f0fff4; border-radius: 10px; text-align: center; border: 1px solid #c6f6d5; }
+        .wa-btn { background-color: var(--whatsapp-green); color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; font-size: 18px; transition: 0.3s; }
+        .wa-btn:hover { background-color: #1eb954; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
 
         @media (max-width: 768px) { 
-            .form-card { margin: 20px; padding: 25px; } 
+            .form-card { margin: 15px; padding: 25px; } 
+            .contact-group { gap: 10px; }
             .phone-num { font-size: 18px; }
+            .location-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -100,77 +116,83 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="faq.html">FAQ</a>
+    <a href="emergency.html">Emergency</a>
 </nav>
 
 <div class="form-card">
-    <h1><i class="fas fa-file-invoice-dollar"></i> Free Estimate</h1>
-    <p class="subtitle">Complete the form or use WhatsApp for a faster response.</p>
+    <h1>Get a Quote</h1>
+    <p class="subtitle">Fast, reliable and professional home services.</p>
     
-    <form action="https://formspree.io/f/anton@gmail.com" method="POST" enctype="multipart/form-data">
+    <form action="https://formspree.io/f/handymasterpro777@gmail.com" method="POST" enctype="multipart/form-data">
         
-        <label>Project Location:</label>
-        <div class="type-selector">
-            <input type="radio" id="indoor" name="location" value="Indoor" checked>
-            <label for="indoor" class="type-option"><i class="fas fa-home"></i><br>INDOOR</label>
-            
-            <input type="radio" id="outdoor" name="location" value="Outdoor">
-            <label for="outdoor" class="type-option"><i class="fas fa-tree"></i><br>OUTDOOR</label>
+        <span class="section-label">1. Project Location</span>
+        <div class="location-grid">
+            <label>
+                <input type="radio" name="project_location" value="Indoor" checked>
+                <div class="location-card">
+                    <i class="fas fa-couch"></i>
+                    <span>Indoor Repair</span>
+                </div>
+            </label>
+            <label>
+                <input type="radio" name="project_location" value="Outdoor">
+                <div class="location-card">
+                    <i class="fas fa-tools"></i>
+                    <span>Outdoor Work</span>
+                </div>
+            </label>
         </div>
 
+        <span class="section-label">2. Service Details</span>
         <div class="form-group">
-            <label for="service">Service Category:</label>
-            <select id="service" name="service" required>
-                <option value="" disabled selected>Select a service...</option>
-                <option value="Plumbing">Plumbing Repairs</option>
-                <option value="Electrical">Electrical Work</option>
-                <option value="Furniture">Furniture Assembly</option>
-                <option value="Painting">Painting / Drywall</option>
-                <option value="Kitchen/Bath">Kitchen or Bathroom Reno</option>
-                <option value="TV Mounting">TV Mounting / Hanging</option>
-                <option value="Maintenance">General Maintenance</option>
-                <option value="Other">Other</option>
+            <label>What do you need help with?</label>
+            <select name="service_category" required>
+                <option value="" disabled selected>Select service category...</option>
+                <option value="General Handyman">General Repairs & Maintenance</option>
+                <option value="Plumbing">Plumbing (Leaks, Faucets, Toilets)</option>
+                <option value="Drywall">Drywall Repair & Patching</option>
+                <option value="Electrical">Electrical (Lights, Outlets, Fans)</option>
+                <option value="Furniture">Furniture Assembly (IKEA, etc.)</option>
+                <option value="TV Mounting">TV Mounting & Wall Hanging</option>
+                <option value="Painting">Painting & Touch-ups</option>
+                <option value="Other">Something Else (Explain below)</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label for="name">Your Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" required>
+            <label>Describe the job</label>
+            <textarea name="description" rows="4" placeholder="The more details, the better the estimate..." required></textarea>
         </div>
 
         <div class="form-group">
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (___) ___-____" required>
-        </div>
-
-        <div class="form-group">
-            <label for="details">Project Details:</label>
-            <textarea id="details" name="message" rows="3" placeholder="Describe what needs fixing..." required></textarea>
-        </div>
-
-        <div class="form-group">
-            <label>Attach Photos (max 2):</label>
-            <div class="file-input-wrapper">
-                <input type="file" name="upload" accept="image/*" multiple>
+            <label>Attach Photos (Highly Recommended)</label>
+            <div class="file-box">
+                <input type="file" name="attachment" accept="image/*" multiple>
+                <p style="margin: 10px 0 0; font-size: 14px; color: #777;">Click to upload photos of the area/issue</p>
             </div>
         </div>
 
-        <input type="hidden" name="_subject" value="New Estimate Request with Photos">
-        <button type="submit" class="submit-btn">SEND EMAIL REQUEST</button>
+        <span class="section-label">3. Contact Information</span>
+        <div class="form-group">
+            <input type="text" name="client_name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" name="client_phone" placeholder="Phone Number" required>
+        </div>
+
+        <button type="submit" class="submit-btn">SEND REQUEST</button>
     </form>
 
     <div class="whatsapp-alt">
-        <p style="margin-bottom: 15px; font-weight: bold; color: #555;">— OR QUICK QUOTE VIA —</p>
-        <a href="https://wa.me/14372547774?text=Hi! I need an estimate. Here are the photos of my project:" class="wa-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> SEND PHOTOS ON WHATSAPP
+        <p style="margin-bottom: 15px; font-weight: bold; color: var(--dark-blue);">Want a quote in 15 minutes?</p>
+        <a href="https://wa.me/14372547774?text=Hi! I need an estimate. Here are my project details:" class="wa-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> TEXT US ON WHATSAPP
         </a>
-        <p style="font-size: 13px; color: #888; margin-top: 10px;">The fastest way to get a price!</p>
     </div>
-    
-    <a href="index.html" class="back-link">← Back to Homepage</a>
 </div>
 
 <footer>
-    <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Licensed & Insured.</p>
+    <p style="text-align: center; padding: 25px; background: #222; color: #888; margin: 0;">© 2026 HandyMaster Pro. Fully Licensed & Insured.</p>
 </footer>
 
 </body>
