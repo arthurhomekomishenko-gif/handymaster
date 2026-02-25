@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HandyMaster Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root { --dark-blue: #1a237e; --bright-red: #d32f2f; --whatsapp-green: #25d366; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        
+        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-area img { max-height: 70px; }
+        
+        nav { background: var(--dark-blue); padding: 10px 5%; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav a:hover { color: #ffeb3b; }
+
+        .content-container { max-width: 1000px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: var(--dark-blue); border-bottom: 3px solid var(--bright-red); display: inline-block; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        .about-grid img { width: 100%; border-radius: 8px; }
+        
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo"></a>
+    </div>
+    <div class="contact-group">
+        <a href="tel:+14372547774" style="font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none;">+1 (437) 254-7774</a>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+</nav>
+
+<div class="content-container">
+    <h1>Our Story</h1>
+    <div class="about-grid">
+        <div>
+            <p>Welcome to <strong>HandyMaster Pro</strong>. We started as a small family-driven initiative in Ontario with one goal: to provide honest, high-quality repair services that homeowners can actually rely on.</p>
+            <p>With over 10 years of experience in home improvements, we understand that your house is your biggest investment. That’s why we don’t just "fix things"—we ensure they are safe, durable, and aesthetically pleasing.</p>
+            <h3>Our Mission</h3>
+            <p>To bring professional-grade craftsmanship to every household in the GTA, from Milton to Kitchener, maintaining the highest standards of cleanliness and integrity.</p>
+        </div>
+        <img src="https://i.ibb.co/RkksT0TM/main-photo.jpg" alt="Our Team">
+    </div>
+</div>
+
+<a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+</a>
+
+<footer>
+    <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Licensed & Insured.</p>
+</footer>
+
+</body>
+</html>
