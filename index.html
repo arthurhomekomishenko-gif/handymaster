@@ -165,17 +165,58 @@
     </div>
 </section>
 
-<section class="bottom-form-container">
-    <h2><i class="fas fa-tools"></i> Quick Request / Text Us</h2>
-    <form action="https://formspree.io/f/anton@gmail.com" method="POST">
-        <div class="form-row">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
+<section id="contact" style="padding: 60px 5%; background: #f4f4f4;">
+    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #1a237e; margin-top: 0; text-transform: uppercase;">Get a Free Quote</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">Send us a message and we'll get back to you shortly!</p>
+
+        <form action="https://formspree.io/f/mykdoyrw" method="POST" enctype="multipart/form-data">
+            
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name</label>
+                <input type="text" name="name" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" placeholder="John Doe" required>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number</label>
+                <input type="tel" name="phone" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" placeholder="+1 (___) ___-____" required>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Service Needed</label>
+                <select name="service" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" required>
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="General Repair">General Repair</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Furniture">Furniture Assembly</option>
+                    <option value="TV Mounting">TV Mounting</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
+                <textarea name="message" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Briefly describe your project..." required></textarea>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Attach Photo (Optional)</label>
+                <input type="file" name="upload" accept="image/*" style="font-size: 14px;">
+            </div>
+
+            <button type="submit" style="width: 100%; background: #d32f2f; color: white; border: none; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; transition: 0.3s;">
+                SEND REQUEST
+            </button>
+        </form>
+
+        <div style="margin-top: 25px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+            <p style="margin-bottom: 10px; font-weight: bold; color: #555;">Fastest Response:</p>
+            <a href="https://wa.me/14372547774" style="color: #25d366; text-decoration: none; font-weight: bold; font-size: 18px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us Now
+            </a>
         </div>
-        <textarea name="message" placeholder="What needs fixing? Describe your project briefly..." required></textarea>
-        <button type="submit" class="send-btn">SEND REQUEST</button>
-    </form>
+    </div>
 </section>
 
 <section class="instagram-feed">
