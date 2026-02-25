@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - HandyMaster Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root { --dark-blue: #1a237e; --bright-red: #d32f2f; --whatsapp-green: #25d366; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        
+        /* Navigation */
+        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo-area img { max-height: 70px; }
+        nav { background: var(--dark-blue); padding: 10px 5%; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav a:hover { color: #ffeb3b; }
+
+        /* FAQ Styling */
+        .faq-container { max-width: 900px; margin: 40px auto; padding: 0 20px; min-height: 70vh; }
+        h1 { text-align: center; color: var(--dark-blue); margin-bottom: 30px; text-transform: uppercase; }
+        
+        .faq-item { background: white; margin-bottom: 10px; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .faq-question { background: white; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--dark-blue); transition: 0.3s; }
+        .faq-question:hover { background: #f9f9f9; }
+        .faq-question i { transition: 0.3s; color: var(--bright-red); }
+        
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fff; color: #555; line-height: 1.6; }
+        .faq-item.active .faq-answer { max-height: 500px; padding: 20px; border-top: 1px solid #eee; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        .cta-box { text-align: center; margin-top: 50px; background: var(--dark-blue); color: white; padding: 30px; border-radius: 8px; }
+        .cta-btn { background: var(--bright-red); color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 15px; }
+
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo"></a>
+    </div>
+    <a href="tel:+14372547774" style="font-size: 18px; color: var(--bright-red); font-weight: bold; text-decoration: none;">+1 (437) 254-7774</a>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+</nav>
+
+<div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+        <div class="faq-question">What areas do you serve? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">We proudly serve the Greater Toronto Area (GTA) and Halton Region, including Milton, Oakville, Burlington, Mississauga, Hamilton, Kitchener, and Guelph.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Do you provide free estimates? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes! We provide free rough estimates over the phone or via WhatsApp if you send us photos of the project. For complex on-site assessments, a small consultation fee may apply, which is then deducted from your final invoice.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">How do you charge: hourly or flat rate? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">It depends on the job. Small repairs are usually charged at a competitive hourly rate with a 2-hour minimum. Larger projects like flooring or painting are provided as a fixed-price (flat rate) quote.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Are you insured and licensed? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Absolutely. HandyMaster Pro is a fully registered business in Ontario. We carry liability insurance to ensure your property and our team are protected during every job.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Do I need to provide tools or materials? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">We bring all the professional tools required for the job. Regarding materials (like paint, tiles, or specific fixtures), you can provide them yourself, or we can pick them up for you for an additional delivery fee.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Do you work on weekends? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes, we understand that our clients have busy schedules. We offer weekend appointments by request to ensure your home repairs don't interfere with your work week.</div>
+    </div>
+
+    <div class="cta-box">
+        <h3>Still have questions?</h3>
+        <p>Text us a photo of your project for a quick quote!</p>
+        <a href="https://wa.me/14372547774" class="cta-btn">MESSAGE ON WHATSAPP</a>
+    </div>
+</div>
+
+<a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+</a>
+
+<footer>
+    <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Licensed & Insured.</p>
+</footer>
+
+<script>
+    // Script for Accordion Effect
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
