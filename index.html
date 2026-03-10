@@ -17,7 +17,6 @@
         
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; overflow-x: hidden; }
         
-        /* Header & Navigation */
         header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .logo-area img { height: 70px; width: auto; display: block; }
         .contact-group { display: flex; align-items: center; gap: 20px; }
@@ -30,43 +29,35 @@
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
         nav a:hover { color: #ffeb3b; }
 
-        /* Business Card (Hero) */
         .business-card { background: linear-gradient(135deg, var(--dark-blue) 0%, #0d124d 100%); color: white; max-width: 1200px; margin: 20px auto; padding: 40px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
         .card-info h2 { margin: 0 0 10px 0; font-size: 28px; color: #ffeb3b; text-transform: uppercase; }
         .card-badge { background: var(--bright-red); color: white; padding: 18px 30px; border-radius: 6px; font-weight: bold; text-transform: uppercase; text-decoration: none; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(211,47,47,0.4); text-align: center; }
         .card-badge:hover { background: #b71c1c; transform: translateY(-3px); }
 
-        /* Main Visual */
         .profile-photo-container { max-width: 1140px; margin: 0 auto 30px auto; padding: 0 20px; }
         .profile-photo-container img { width: 100%; max-height: 550px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); display: block; }
 
-        /* About Section */
         .about-section { background: white; max-width: 1140px; margin: 20px auto; padding: 40px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .about-section h2 { color: var(--dark-blue); border-left: 5px solid var(--bright-red); padding-left: 15px; margin-bottom: 20px; }
 
-        /* Services Grid */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px 5%; max-width: 1200px; margin: 0 auto; }
         .service-cube { background: white; border-radius: 10px; text-decoration: none; color: #333; transition: 0.3s; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; }
         .service-cube:hover { border-color: var(--bright-red); transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
         .service-cube img { width: 100%; height: 200px; object-fit: cover; display: block; }
         .service-cube span { display: block; padding: 15px; font-weight: bold; background: white; text-align: center; text-transform: uppercase; color: var(--dark-blue); }
 
-        /* Reviews Section */
         .reviews-section { padding: 60px 5%; background: white; margin-top: 40px; }
         .reviews-section h2 { text-align: center; color: var(--dark-blue); text-transform: uppercase; margin-bottom: 40px; }
 
-        /* Map Section */
         .map-section { padding: 40px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
-        .map-box iframe { border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px; }
+        .map-box { margin-top: 25px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #ddd; }
 
-        /* Instagram Feed */
         .instagram-feed { background: white; max-width: 1140px; margin: 40px auto; padding: 30px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .insta-header { display: flex; align-items: center; margin-bottom: 20px; text-decoration: none; color: inherit; }
         .insta-header i { font-size: 40px; color: #E4405F; margin-right: 15px; }
         .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
         .insta-grid img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 6px; transition: 0.3s; }
 
-        /* Float WhatsApp */
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp-green); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
 
         @media (max-width: 768px) { 
@@ -128,11 +119,16 @@
 </section>
 
 <section class="map-section">
-    <h3 style="color: var(--dark-blue); text-transform: uppercase;">Our Service Area</h3>
+    <h3 style="color: var(--dark-blue); text-transform: uppercase; margin-bottom: 0;">Find Us on Google Maps</h3>
     <div class="map-box">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184764.12001556947!2d-79.83363403310057!3d43.54359005938363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b469fe66453c7%3A0xc66c1b3333333333!2sMississauga%2C%20ON!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca" 
-            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            src="https://support.google.com/maps/answer/6230175?hl=ru&co=GENIE.Platform%3DDesktop2" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
 </section>
@@ -168,7 +164,7 @@
         <i class="fab fa-instagram"></i>
         <div>
             <h3>Follow @handymasterio</h3>
-            <span>Real photos of our work</span>
+            <span>Real photos of our work in GTA</span>
         </div>
     </a>
     <div class="insta-grid">
@@ -182,7 +178,7 @@
 </section>
 
 <footer>
-    <p style="text-align: center; padding: 30px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Fully Licensed & Insured. Serving Mississauga & GTA.</p>
+    <p style="text-align: center; padding: 30px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Fully Licensed & Insured. Serving Mississauga & GTA Area.</p>
 </footer>
 
 <a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank">
