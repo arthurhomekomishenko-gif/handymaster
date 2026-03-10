@@ -40,11 +40,12 @@
         .about-section { background: white; max-width: 1140px; margin: 20px auto; padding: 40px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .about-section h2 { color: var(--dark-blue); border-left: 5px solid var(--bright-red); padding-left: 15px; margin-bottom: 20px; }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px 5%; max-width: 1200px; margin: 0 auto; }
-        .service-cube { background: white; border-radius: 10px; text-decoration: none; color: #333; transition: 0.3s; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        /* Services Grid - 4 columns on desktop, 2 on mobile */
+        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 20px 5%; max-width: 1200px; margin: 0 auto; }
+        .service-cube { background: white; border-radius: 10px; text-decoration: none; color: #333; transition: 0.3s; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; display: flex; flex-direction: column; }
         .service-cube:hover { border-color: var(--bright-red); transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .service-cube img { width: 100%; height: 200px; object-fit: cover; display: block; }
-        .service-cube span { display: block; padding: 15px; font-weight: bold; background: white; text-align: center; text-transform: uppercase; color: var(--dark-blue); }
+        .service-cube img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .service-cube span { display: block; padding: 15px; font-weight: bold; background: white; text-align: center; text-transform: uppercase; color: var(--dark-blue); font-size: 13px; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
 
         .reviews-section { padding: 60px 5%; background: white; margin-top: 40px; }
         .reviews-section h2 { text-align: center; color: var(--dark-blue); text-transform: uppercase; margin-bottom: 40px; }
@@ -60,6 +61,7 @@
 
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp-green); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
 
+        @media (max-width: 992px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
         @media (max-width: 768px) { 
             .business-card { flex-direction: column; text-align: center; padding: 25px; } 
             .insta-grid { grid-template-columns: repeat(3, 1fr); }
@@ -107,10 +109,14 @@
 </section>
 
 <div class="services-grid">
-    <a href="Electrical.html" class="service-cube"><img src="https://i.postimg.cc/vZV0VDXs/IMG-0464.avif"><span>Electrical</span></a>
+    <a href="Electrical.html" class="service-cube"><img src="https://i.postimg.cc/vZV0VDXs/IMG-0464.avif"><span>Electrical Work</span></a>
     <a href="Painting.html" class="service-cube"><img src="https://i.postimg.cc/RZ5KcqRk/IMG_6859.jpg"><span>Painting</span></a>
     <a href="furniture.html" class="service-cube"><img src="https://i.postimg.cc/pVKFPPx5/IMG_8326.jpg"><span>Furniture Assembly</span></a>
     <a href="drywall.html" class="service-cube"><img src="https://i.postimg.cc/QtdjYgKn/IMG_6883.jpg"><span>Drywall Repair</span></a>
+    <a href="doors.html" class="service-cube"><img src="https://i.postimg.cc/L5kYD3vV/IMG_6636.avif"><span>Door & Window</span></a>
+    <a href="flooring.html" class="service-cube"><img src="https://i.postimg.cc/Pf1wddhp/IMG_6886.jpg"><span>Flooring</span></a>
+    <a href="deck.html" class="service-cube"><img src="https://i.postimg.cc/J7jkRRmG/IMG_6875.jpg"><span>Deck Repair</span></a>
+    <a href="maintenance.html" class="service-cube"><img src="https://i.postimg.cc/Z5tpr0cs/IMG_6820.jpg"><span>General Maintenance</span></a>
 </div>
 
 <section class="reviews-section">
@@ -122,7 +128,7 @@
     <h3 style="color: var(--dark-blue); text-transform: uppercase; margin-bottom: 0;">Find Us on Google Maps</h3>
     <div class="map-box">
         <iframe 
-            src="https://support.google.com/maps/answer/6230175?hl=ru&co=GENIE.Platform%3DDesktop2" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11568.2718151811!2d-79.7610086!3d43.5426145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41006509a243%3A0x633458b68a86780c!2sHandymasterpro!5e0!3m2!1sen!2sca!4v1741624800000!5m2!1sen!2sca" 
             width="100%" 
             height="450" 
             style="border:0;" 
