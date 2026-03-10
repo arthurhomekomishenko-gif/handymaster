@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMERGENCY REPAIRS - HandyMaster Pro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://elfsightcdn.com/platform.js" async></script>
     <style>
         :root { 
             --dark-blue: #1a237e; 
@@ -13,7 +14,6 @@
         }
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fff; color: #333; }
         
-        /* Идентичный Header как на главной */
         header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .logo-area img { height: 70px; width: auto; display: block; }
         .contact-group { display: flex; align-items: center; gap: 20px; }
@@ -22,12 +22,10 @@
         .fa-whatsapp { color: var(--whatsapp-green); }
         .fa-instagram { color: #E4405F; }
 
-        /* Навигация */
         nav { background: var(--dark-blue); padding: 12px 5%; text-align: center; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
         nav a:hover { color: #ffeb3b; }
 
-        /* Emergency Content */
         .emergency-hero { background: var(--bright-red); color: white; text-align: center; padding: 60px 20px; }
         .emergency-hero h1 { font-size: 42px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
         .emergency-hero p { font-size: 20px; margin-top: 10px; font-weight: bold; }
@@ -41,10 +39,11 @@
         .call-now-box { text-align: center; margin: 50px auto; max-width: 700px; padding: 40px 20px; border: 3px dashed var(--bright-red); border-radius: 12px; background: #fffcfc; }
         .call-now-box h2 { color: var(--dark-blue); margin-top: 0; }
         .big-phone { font-size: 36px; color: var(--bright-red); font-weight: bold; text-decoration: none; display: block; margin: 20px 0; }
-        .big-phone:hover { text-decoration: underline; }
         
         .btn-emergency-wa { background: var(--whatsapp-green); color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
         .btn-emergency-wa:hover { transform: scale(1.05); background: #1eb954; }
+
+        .reviews-container { max-width: 1140px; margin: 50px auto; padding: 0 20px; }
 
         .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
 
@@ -53,6 +52,7 @@
             .emergency-hero h1 { font-size: 28px; }
             .contact-group { gap: 10px; }
             .phone-num { font-size: 18px; }
+            .big-phone { font-size: 28px; }
         }
     </style>
 </head>
@@ -69,11 +69,11 @@
     </div>
 </header>
 
-<nav style="background: #1a237e; padding: 10px 5%; text-align: center;">
-    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">Home</a>
-    <a href="emergency.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">EMERGENCY</a>
-    <a href="about.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">About Us</a>
-    <a href="faq.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">FAQ</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="emergency.html">EMERGENCY</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
 </nav>
 
 <div class="emergency-hero">
@@ -104,6 +104,11 @@
     </div>
 </div>
 
+<div class="reviews-container">
+    <h2 style="text-align: center; color: var(--dark-blue); margin-bottom: 30px;">Why Clients Trust Us in Emergencies</h2>
+    <div class="elfsight-app-40af127b-a36f-4874-b876-23e2cac00f9c" data-elfsight-app-lazy></div>
+</div>
+
 <div class="call-now-box">
     <h2>NEED ASSISTANCE IMMEDIATELY?</h2>
     <p>The fastest way to reach us is by Phone or WhatsApp</p>
@@ -117,7 +122,7 @@
     <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
 </a>
 
-<footer>
+<footer style="margin-top: 40px;">
     <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Emergency Service Rates May Apply.</p>
 </footer>
 
