@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handymaster Pro - Professional Home Improvements</title>
+    <title>HandyMaster Pro - Professional Home Improvements</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9YFG3G95Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R9YFG3G95Y');
+    </script>
+
     <script src="https://elfsightcdn.com/platform.js" async></script>
 
     <style>
@@ -34,13 +43,23 @@
         .card-badge { background: var(--bright-red); color: white; padding: 18px 30px; border-radius: 6px; font-weight: bold; text-transform: uppercase; text-decoration: none; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(211,47,47,0.4); text-align: center; }
         .card-badge:hover { background: #b71c1c; transform: translateY(-3px); }
 
-        .profile-photo-container {max-width: 100%; margin: 0; padding: 0; }
-        .profile-photo-container img {  width: 100%; height: auto; max-height: 80vh; object-fit: coverborder-radius: 40px;display: block}
+        /* Настройка фото: Макс ширина 1280px, полная высота, скругление */
+        .profile-photo-container { 
+            max-width: 1280px; 
+            margin: 0 auto 30px auto; 
+            padding: 0 15px; 
+        }
+        .profile-photo-container img { 
+            width: 100%; 
+            height: auto; /* Фото не растягивается, сохраняет пропорции */
+            border-radius: 40px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+            display: block; 
+        }
 
         .about-section { background: white; max-width: 1140px; margin: 20px auto; padding: 40px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .about-section h2 { color: var(--dark-blue); border-left: 5px solid var(--bright-red); padding-left: 15px; margin-bottom: 20px; }
 
-        /* Services Grid - 4 columns on desktop, 2 on mobile */
         .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 20px 5%; max-width: 1200px; margin: 0 auto; }
         .service-cube { background: white; border-radius: 10px; text-decoration: none; color: #333; transition: 0.3s; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; display: flex; flex-direction: column; }
         .service-cube:hover { border-color: var(--bright-red); transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
@@ -67,20 +86,9 @@
             .insta-grid { grid-template-columns: repeat(3, 1fr); }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-group { gap: 10px; justify-content: center; width: 100%; margin-top: 10px; }
+            .profile-photo-container img { border-radius: 20px; } /* Чуть меньше скругление на мобилках */
         }
     </style>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9YFG3G95Y">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R9YFG3G95Y');
-</script>
-    
 </head>
 <body>
 
@@ -117,7 +125,7 @@
 
 <section class="about-section">
     <h2>Reliable Home Repairs & Maintenance</h2>
-    <p>At <strong>Handymaster Pro</strong>, we believe that no repair is too small for perfection. We specialize in home maintenance of any complexity, treating every project as if it were our own home. From leaky faucets to electrical updates, we ensure top-tier quality and cleanliness.</p>
+    <p>At <strong>Handymaster Pro</strong>, we believe that no repair is too small for perfection. We specialize in home maintenance of any complexity, treating every project as if it were our own home.</p>
 </section>
 
 <div class="services-grid">
@@ -131,26 +139,12 @@
     <a href="maintenance.html" class="service-cube"><img src="https://i.postimg.cc/Z5tpr0cs/IMG_6820.jpg"><span>General Maintenance</span></a>
 </div>
 
-<section class="instagram-feed">
-    <a href="https://instagram.com/handymasterio" target="_blank" class="insta-header">
-        <i class="fab fa-instagram"></i>
-        <div>
-            <h3>Follow @handymasterio</h3>
-            <span>Real photos of our work in GTA</span>
-        </div>
-    </a>
-    <div class="insta-grid">
-        <a href="https://www.instagram.com/p/DIMjwqGS5w2/"><img src="https://i.postimg.cc/Nfb2rLWh/Insta1.jpg"></a>
-        <a href="https://www.instagram.com/p/DIMerD6p2eW/"><img src="https://i.postimg.cc/PrKv8N09/Insta2.jpg"></a>
-        <a href="https://www.instagram.com/p/DIMpvGYSYwl/"><img src="https://i.postimg.cc/gk4L6r15/Insta3.jpg"></a>
-        <a href="https://www.instagram.com/p/DIMlP_ESehP/"><img src="https://i.postimg.cc/8Pwfrsx0/Insta4.jpg"></a>
-        <a href="https://www.instagram.com/p/DIMoRVoSTAV/"><img src="https://i.postimg.cc/c4Tt86Pz/Insta5.jpg"></a>
-        <a href="https://www.instagram.com/p/DIMo84fSrgJ/"><img src="https://i.postimg.cc/Ghbs2vSw/Insta6.jpg"></a>
-    </div>
+<section class="reviews-section">
+    <h2>What Our Clients Say</h2>
+    <div class="elfsight-app-8f1f4da8-65b3-4bb6-9f24-df8e658a0110" data-elfsight-app-lazy></div>
 </section>
-    
+
 <section class="map-section">
-    <h3 style="color: var(--dark-blue); text-transform: uppercase; margin-bottom: 0;">Find Us on Google Maps</h3>
     <div class="map-box">
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11568.2718151811!2d-79.7610086!3d43.5426145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41006509a243%3A0x633458b68a86780c!2sHandymasterpro!5e0!3m2!1sen!2sca!4v1741624800000!5m2!1sen!2sca" 
@@ -163,38 +157,6 @@
         </iframe>
     </div>
 </section>
-
-<section id="contact" style="padding: 60px 5%; background: #f4f4f4;">
-    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-        <h2 style="text-align: center; color: #1a237e; margin-top: 0; text-transform: uppercase;">Get a Free Quote</h2>
-        <form action="https://formspree.io/f/mykdoyrw" method="POST">
-            <div style="margin-bottom: 15px;">
-                <input type="text" name="name" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Full Name" required>
-            </div>
-            <div style="margin-bottom: 15px;">
-                <input type="tel" name="phone" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Phone Number" required>
-            </div>
-            <div style="margin-bottom: 15px;">
-                <select name="service" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" required>
-                    <option value="" disabled selected>Select a service...</option>
-                    <option value="General Repair">General Repair</option>
-                    <option value="Plumbing">Plumbing</option>
-                    <option value="Electrical">Electrical</option>
-                    <option value="Furniture">Furniture Assembly</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <textarea name="message" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Describe the job..." required></textarea>
-            <button type="submit" class="card-badge" style="width: 100%; border: none; margin-top: 20px; cursor: pointer;">SEND MESSAGE</button>
-        </form>
-    </div>
-</section>
-    
-<section class="reviews-section">
-    <h2>What Our Clients Say</h2>
-    <div class="elfsight-app-8f1f4da8-65b3-4bb6-9f24-df8e658a0110" data-elfsight-app-lazy></div>
-</section>
-
 
 <footer>
     <p style="text-align: center; padding: 30px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Fully Licensed & Insured. Serving Mississauga & GTA Area.</p>
