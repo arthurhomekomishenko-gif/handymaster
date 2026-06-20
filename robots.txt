@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://handymasterpro.ca/sitemap.xml

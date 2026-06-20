@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyMaster Pro - Professional Handyman Services in Mississauga & GTA</title>
+    <meta name="description" content="HandyMaster Pro - Professional handyman services in Mississauga, GTA &amp; Halton. Electrical, painting, flooring, drywall, furniture assembly &amp; more. Licensed &amp; insured. Call +1 (437) 254-7774.">
+    <link rel="canonical" href="https://handymasterpro.ca/">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HandyMaster Pro - Professional Handyman Services in Mississauga & GTA">
+    <meta property="og:description" content="Professional handyman services in Mississauga, GTA & Halton. Electrical, painting, flooring, drywall, furniture assembly & more. Licensed & insured.">
+    <meta property="og:url" content="https://handymasterpro.ca/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.postimg.cc/FsT9NSJM/IMG-1533.png">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:site_name" content="HandyMaster Pro">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HandyMaster Pro - Professional Handyman Services in Mississauga & GTA">
+    <meta name="twitter:description" content="Professional handyman services in Mississauga, GTA & Halton. Electrical, painting, flooring, drywall, furniture assembly & more. Licensed & insured.">
+    <meta name="twitter:image" content="https://i.postimg.cc/FsT9NSJM/IMG-1533.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9YFG3G95Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R9YFG3G95Y');
+    </script>
+
+    <style>
+        :root {
+            --dark-blue: #1a237e;
+            --bright-red: #d32f2f;
+            --whatsapp-green: #25d366;
+        }
+
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 3px solid var(--bright-red);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo-area img { height: 70px; width: auto; display: block; }
+        .contact-group { display: flex; align-items: center; gap: 20px; }
+        .social-link { font-size: 30px; text-decoration: none; transition: 0.3s; }
+        .fa-whatsapp { color: var(--whatsapp-green); }
+        .fa-instagram { color: #E4405F; }
+        .phone-num { font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none; }
+
+        /* Nav */
+        nav { background: var(--dark-blue); padding: 12px 5%; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        nav a:hover { color: #ffeb3b; }
+
+        /* Hero */
+        .hero {
+            background: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 { font-size: 40px; margin: 0 0 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .hero p { font-size: 20px; margin: 0 0 30px; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn-hero {
+            padding: 16px 36px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .btn-estimate-hero { background: var(--bright-red); color: white; }
+        .btn-estimate-hero:hover { background: #b71c1c; }
+        .btn-whatsapp-hero { background: var(--whatsapp-green); color: white; }
+        .btn-whatsapp-hero:hover { background: #1ebe57; }
+
+        /* Services */
+        .services-section { max-width: 1100px; margin: 50px auto; padding: 0 20px; text-align: center; }
+        .services-section h2 { color: var(--dark-blue); font-size: 32px; text-transform: uppercase; margin-bottom: 10px; }
+        .services-section .subtitle { color: #666; font-size: 18px; margin-bottom: 40px; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .service-card i { font-size: 40px; color: var(--bright-red); margin-bottom: 15px; }
+        .service-card h3 { color: var(--dark-blue); margin: 0 0 10px; font-size: 18px; text-transform: uppercase; }
+        .service-card p { font-size: 14px; color: #666; margin: 0; }
+
+        /* Why Choose Us */
+        .why-section { background: white; padding: 60px 20px; text-align: center; }
+        .why-section h2 { color: var(--dark-blue); font-size: 32px; text-transform: uppercase; margin-bottom: 40px; }
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .why-item { text-align: center; }
+        .why-item i { font-size: 45px; color: var(--bright-red); margin-bottom: 15px; }
+        .why-item h3 { color: var(--dark-blue); font-size: 18px; margin: 0 0 10px; }
+        .why-item p { font-size: 14px; color: #666; margin: 0; }
+
+        /* CTA */
+        .cta-section { background: var(--dark-blue); color: white; text-align: center; padding: 60px 20px; }
+        .cta-section h2 { font-size: 32px; margin: 0 0 15px; text-transform: uppercase; }
+        .cta-section p { font-size: 18px; opacity: 0.9; margin: 0 0 30px; }
+        .btn-cta { background: var(--bright-red); color: white; padding: 16px 40px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 4px; text-transform: uppercase; display: inline-block; transition: 0.3s; }
+        .btn-cta:hover { background: #b71c1c; }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: var(--whatsapp-green); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            text-align: center; font-size: 30px;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; z-index: 1000;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .contact-group { gap: 10px; }
+            .phone-num { font-size: 16px; }
+            nav a { margin: 0 8px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo" style="height: 70px; width: auto; display: block;"></a>
+    </div>
+    <div class="contact-group">
+        <a href="https://wa.me/14372547774" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/handymasterio" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+14372547774" class="phone-num">+1 (437) 254-7774</a>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="emergency.html">EMERGENCY</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Your Trusted Handyman in Mississauga & GTA</h1>
+    <p>Licensed & insured professionals with 10+ years of experience. From electrical work to full renovations, we handle it all with quality and care.</p>
+    <div class="hero-buttons">
+        <a href="estimate.html" class="btn-hero btn-estimate-hero">Get a Free Estimate</a>
+        <a href="https://wa.me/14372547774" class="btn-hero btn-whatsapp-hero" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section">
+    <h2>Our Services</h2>
+    <p class="subtitle">Professional solutions for every home improvement need</p>
+    <div class="services-grid">
+        <a href="Electrical.html" class="service-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Electrical Work</h3>
+            <p>Fixtures, outlets, smart home installations & more</p>
+        </a>
+        <a href="Painting.html" class="service-card">
+            <i class="fas fa-paint-roller"></i>
+            <h3>Interior Painting</h3>
+            <p>Walls, ceilings, trim & accent painting</p>
+        </a>
+        <a href="furniture.html" class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>Furniture Assembly</h3>
+            <p>IKEA, Wayfair & all flat-pack furniture</p>
+        </a>
+        <a href="drywall.html" class="service-card">
+            <i class="fas fa-border-all"></i>
+            <h3>Drywall Repair</h3>
+            <p>Patches, holes, cracks & full finishing</p>
+        </a>
+        <a href="doors.html" class="service-card">
+            <i class="fas fa-door-open"></i>
+            <h3>Doors & Windows</h3>
+            <p>Installation, replacement & weatherproofing</p>
+        </a>
+        <a href="flooring.html" class="service-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Flooring</h3>
+            <p>Laminate, vinyl, hardwood & tile</p>
+        </a>
+        <a href="deck.html" class="service-card">
+            <i class="fas fa-hammer"></i>
+            <h3>Deck & Fence</h3>
+            <p>Building, repair & staining</p>
+        </a>
+        <a href="maintenance.html" class="service-card">
+            <i class="fas fa-wrench"></i>
+            <h3>General Maintenance</h3>
+            <p>TV mounting, shelving, caulking & more</p>
+        </a>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-section">
+    <h2>Why Choose HandyMaster Pro?</h2>
+    <div class="why-grid">
+        <div class="why-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Licensed & Insured</h3>
+            <p>Fully licensed and insured for your peace of mind. We stand behind every job.</p>
+        </div>
+        <div class="why-item">
+            <i class="fas fa-award"></i>
+            <h3>10+ Years Experience</h3>
+            <p>Over a decade of hands-on experience in residential and commercial projects.</p>
+        </div>
+        <div class="why-item">
+            <i class="fas fa-dollar-sign"></i>
+            <h3>Free Estimates</h3>
+            <p>No hidden fees, no surprises. Get a detailed quote before we start any work.</p>
+        </div>
+        <div class="why-item">
+            <i class="fas fa-clock"></i>
+            <h3>Same-Day Available</h3>
+            <p>Urgent repairs? We offer same-day service for emergencies in the GTA area.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <h2>Get a Free Quote Today</h2>
+    <p>Tell us about your project and we'll get back to you with a detailed estimate.</p>
+    <a href="estimate.html" class="btn-cta">Request Free Estimate</a>
+</section>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
+
+<p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">&copy; 2026 HandyMaster Pro. Licensed & Insured.</p>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "HandyMaster Pro",
+    "url": "https://handymasterpro.ca",
+    "telephone": "+14372547774",
+    "areaServed": ["Mississauga", "GTA", "Halton Region", "Milton", "Oakville", "Burlington", "Hamilton", "Kitchener", "Guelph"],
+    "priceRange": "$$",
+    "image": "https://i.postimg.cc/FsT9NSJM/IMG-1533.png"
+}
+</script>
+
+</body>
+</html>
